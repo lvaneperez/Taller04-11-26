@@ -1,15 +1,16 @@
 #pragma once
-#include "vehiculoo.h"
+#include "Vehiculo.h"
 
-class carro : public vehiculoo {
+class Carro : public Vehiculo {
     private:
     int pasajeros;
     public:
     Carro(string placa, int pasajeros);
-    ~Carro();
+    ~Carro() override;
+
     void setPasajeros(int pasajeros);
     int getPasajeros() const; 
 
+    int cobrar() const override;
     string info() const override;
-    int cobrar () const override; 
 };
