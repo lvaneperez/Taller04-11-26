@@ -15,7 +15,7 @@ class Vehiculo {
     virtual ~Vehiculo();
 
     string getPlaca() const;
-    void setPropietario(Propietario* propirtario);
+    void setPropietario(Propietario* propietario);
     Propietario* getPropietario() const;
 
     virtual int cobrar() const = 0;
