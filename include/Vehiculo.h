@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <iostream>
 
 using namespace std;
 
@@ -22,3 +23,4 @@ class Vehiculo {
     virtual string info() const = 0;
 
 };
+ostream& operator<<(ostream& salida, const Vehiculo& vehiculo);

@@ -23,3 +23,7 @@ void Vehiculo::setPropietario(Propietario* propietario){
 Propietario* Vehiculo::getPropietario() const {
     return this->propietario;
 }
+ostream& operator<<(ostream& salida, const Vehiculo& vehiculo) {
+    salida << vehiculo.info();
+    return salida;
+}
