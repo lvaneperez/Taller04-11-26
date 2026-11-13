@@ -4,7 +4,7 @@
 #include <iostream>
 
 Bus::Bus(string placa, int puestos) : Vehiculo(placa) {
-    if (puestos <= 1){
+    if (puestos < 1){
         throw DatosInvalidosException("El bus debe tener al menos un puesto");
 
     }

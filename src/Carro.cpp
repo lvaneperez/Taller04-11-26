@@ -27,6 +27,9 @@ void Carro::setPasajeros(int pasajeros) {
     }
     this->pasajeros = pasajeros;
 }
+void Carro:: subirPasajero() {
+    pasajeros++;
+}
 //Consulta la cantidad  de pasajeros 
 int Carro::getPasajeros() const {
     return pasajeros;

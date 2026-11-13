@@ -12,7 +12,7 @@
 using namespace std;
 
 int main () {
-    cout << "EL PROGRAMA INICIO CORRECTAMENTE" << endl;
+    cout << "Peajesito" << endl;
 
     vector<Vehiculo*> vehiculos;
 
@@ -39,12 +39,12 @@ int main () {
     vehiculos.push_back(camion);
 
     //Caso 1: carro din descuento de vecino
-    cout << "\nCASO 1" << endl;
+    cout << "\nCaso 1:" << endl;
     cout << *carro << endl;
     cout << "Valor a pagar: $" << carro->cobrar() <<endl;
 
     //Caso 2: Carro con descuento de vecino
-    cout << "\nCASO 2" << endl;
+    cout << "\nCaso 2:" << endl;
 
     carro->setPropietario(propietarioVecino);
 
@@ -53,7 +53,7 @@ int main () {
     cout << "Valor a pagar: $" << carro->cobrar() << endl;
 
     //Caso 3: Moto de 125 cc con propitario vecino 
-    cout << "\nCASO 3" << endl;
+    cout << "\nCaso 3:" << endl;
 
     moto->setPropietario(propietarioVecino);
 
@@ -61,7 +61,7 @@ int main () {
     cout << "Valor a pagar: $" << moto->cobrar() << endl;
 
     //CASO 4: Moto de 650 cc sin propietario
-    cout <<"\nCASO 4" << endl;
+    cout <<"\nCaso 4:" << endl;
 
     cout << *motoGrande << endl;
     
@@ -74,7 +74,7 @@ int main () {
     cout << "Valor a pagar: $" << motoGrande->cobrar() << endl;
 
     //Caso 5: Bus con propietario vecino
-    cout << "\nCASO 5" << endl;
+    cout << "\nCaso 5:" << endl;
 
     bus->setPropietario(propietarioVecino);
 
@@ -83,13 +83,13 @@ int main () {
     cout  << "valor a pagar $" << bus->cobrar() << endl;
 
     //Caso 6. Camion con 3 ejes
-    cout << "\nCASO 6"<<endl;
+    cout << "\nCaso 6:"<<endl;
 
     cout << *camion << endl;
     cout << "Valor a pagar: $" << camion->cobrar() << endl;
 
     //Caso 7 : Agregar un eje al mismo camion 
-    cout <<"\nCASO 7" << endl;
+    cout <<"\nCaso 7:" << endl;
 
     camion->agregarEje();
 
@@ -97,7 +97,7 @@ int main () {
     cout << "Valor a pagar: $" << camion->cobrar() << endl;
     
     //CASO 8: Intentar crear un carro con placa vacia
-    cout << "\nCASO 8" << endl;
+    cout << "\nCaso 8:" << endl;
 
     try{
         Carro* carroInvalido = new Carro("", 3);
@@ -107,7 +107,7 @@ int main () {
         cout << "Error: " << e.what() << endl;
     }
     // Caso 9. Intentar crear un camion con un solo eje
-    cout << "\nCASO 9 " <<endl;
+    cout << "\nCaso 9:" <<endl;
 
     try {
         Camion* camionInvalido = new Camion("MPA786" , 1);
@@ -118,7 +118,7 @@ int main () {
     }
 
     //Caso 10: Registrar el paso de vehiculos en la caseta
-    cout << "\nCASO 10" << endl;
+    cout << "\nCaso 10:" << endl;
 
     Caseta* caseta = new Caseta(operador);
 
@@ -129,7 +129,6 @@ int main () {
     caseta->registrarPaso(camion);
 
     //Muestra los resultados de la caseta
-
     cout << "Total recaudado: $" << caseta->getTotalRecaudado() << endl;
     cout << "Cantidad de pasos: " << caseta->getCantidadPasos() << endl;
     cout << "Cantidad de carros: " << caseta->getCantidadCarros() << endl;
@@ -138,7 +137,7 @@ int main () {
     cout << "Cantidad de camiones: " << caseta->getCantidadCamiones() << endl;
     
     //Caso 13: Destruccion de objetos
-    cout << "\nCASO 13" << endl;
+    cout << "\nCaso 13:" << endl;
 
     delete caseta;
 

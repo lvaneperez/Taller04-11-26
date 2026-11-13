@@ -10,6 +10,7 @@ class Carro : public Vehiculo {
 
     void setPasajeros(int pasajeros);
     int getPasajeros() const; 
+    void subirPasajero();
 
     int cobrar() const override;
     string info() const override;
