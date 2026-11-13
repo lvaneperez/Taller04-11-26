@@ -8,7 +8,7 @@ using namespace std;
 
 Carro::Carro(string placa, int pasajeros) : Vehiculo(placa) {
 
-    if (pasajeros > 1) {
+    if (pasajeros < 1) {
         throw DatosInvalidosException("El carro debe tener el menos un pasajero");
 
     }
@@ -17,7 +17,7 @@ Carro::Carro(string placa, int pasajeros) : Vehiculo(placa) {
 
 //Destructor 
 Carro::~Carro() {
-    cout << "Destructor Carro" << getPlaca() << endl;
+    cout << "Destruyendo Carro " << getPlaca() << endl;
 }
 //Modifica la cantidad de pasajeros 
 void Carro::setPasajeros(int pasajeros) {

@@ -7,14 +7,13 @@ using namespace std;
 
 Camion::Camion(string placa, int ejes) : Vehiculo(placa) {
     if (ejes < 2) {
-        throw DatosInvalidosException("El camoin debe tener al menos dos ejes");
+        throw DatosInvalidosException("El camion debe tener al menos dos ejes");
 
     }
     this-> ejes = ejes;
 }
 Camion::~Camion() {
-    cout << "Destruyendo Camion"<< getPlaca() << endl; 
-}
+    cout << "Destruyendo Camion"<< getPlaca() << endl; }
 int Camion::getEjes() const {
     return ejes;
 }
